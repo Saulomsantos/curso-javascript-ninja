@@ -8,7 +8,7 @@ equivalente booleano para o valor passado no argumento for `true`, ou `false`
 para o contrário.
 */
 var isTruthy = function(arg1){
-    return !!arg1
+    return !!arg1;
 };
 
 // Invoque a função criada acima, passando todos os tipos de valores `falsy`.
@@ -49,12 +49,12 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 var carro = {
-    marca : '',
-    modelo : '',
-    placa : '',
-    ano : 0,
-    cor : '',
-    quantasPortas : 0,
+    marca : 'Volkswagen',
+    modelo : 'Fox',
+    placa : 'EUN-4665',
+    ano : 2011,
+    cor : 'Vermelha',
+    quantasPortas : 5,
     assentos : 5,
     quantidadePessoas : 0
 };
@@ -150,13 +150,13 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-carro.obterCor();                       // ''
+carro.obterCor();                                       // 'Vermelha'
 
 // Mude a cor do carro para vermelho.
 carro.mudarCor('vermelho');
 
 // E agora, qual a cor do carro?
-carro.obterCor();                       // 'vermelho'
+carro.obterCor();                                       // 'vermelho'
 
 // Mude a cor do carro para verde musgo.
 carro.mudarCor('verde musgo');
@@ -165,7 +165,7 @@ carro.mudarCor('verde musgo');
 carro.obterCor();                                       // 'verde musgo'
 
 // Qual a marca e modelo do carro?
-carro.obterModelo();                                    // ''
+carro.obterModelo();                                    // 'Fox'
 
 // Adicione 2 pessoas no carro.
 carro.adicionarPessoas(2);                              // 'Já temos 2 pessoas no carro!'
