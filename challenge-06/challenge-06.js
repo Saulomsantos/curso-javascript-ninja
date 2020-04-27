@@ -37,44 +37,29 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     "Não temos a informação do time que está nessa posição."
 */
 function showTeamPosition(position){
-    switch (position) {
-        case 1:
-            return 'O time que está em ' + position + 'º lugar é o ' + teams[position - 1] + '.';
-
-        case 2:
-            return 'O time que está em ' + position + 'º lugar é o ' + teams[position - 1] + '.';
-
-        case 3:
-            return 'O time que está em ' + position + 'º lugar é o ' + teams[position - 1] + '.';
-
-        case 4:
-            return 'O time que está em ' + position + 'º lugar é o ' + teams[position - 1] + '.';
-
-        case 5:
-            return 'O time que está em ' + position + 'º lugar é o ' + teams[position - 1] + '.';
-
-        default:
-            return 'Não temos a informação do time que está nessa posição.';
-    };
+    if (position < 1 || position > 5) {
+        return "Não temos informação do time que está nessa posição."
+    }
+    return 'O time que está em ' + position + 'º lugar é o ' + teams[position - 1] + '.';
 };
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-showTeamPosition(1); // 'O time que está em 1º lugar é o santos.'
-showTeamPosition(2); // 'O time que está em 1º lugar é o oeste.'
-showTeamPosition(3); // 'O time que está em 1º lugar é o água santa-sp.'
-showTeamPosition(10); // 'Não temos a informação do time que está nessa posição.'
+console.log(showTeamPosition(1)); // 'O time que está em 1º lugar é o santos.'
+console.log(showTeamPosition(2)); // 'O time que está em 1º lugar é o oeste.'
+console.log(showTeamPosition(3)); // 'O time que está em 1º lugar é o água santa-sp.'
+console.log(showTeamPosition(10)); // 'Não temos a informação do time que está nessa posição.'
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
-var contador = 20;
+var count = 20;
 
-while (contador >= 20 && contador <= 30) {
-    console.log(contador++);
+while (count >= 20 && count <= 30) {
+    console.log(count++);
 };
 
 // 20
@@ -101,40 +86,39 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
-function convertToHex(cor) {
-    switch (cor.toLowerCase()) {
-        case "red": console.log("O hexadecimal para a cor " + cor + " é #FF0000");
+function convertToHex(color) {
+    var hexa;
+    switch (color.toLowerCase()) {
+        case "red": hexa = '#FF0000';
             break;
 
-            // outra forma
-            // case "red":
-            //  return "O hexadecimal para a cor " + cor + " é #FF0000";
-
-        case 'blue': console.log("O hexadecimal para a cor " + cor + " é #0000FF");
+        case 'blue': hexa = '#0000FF';
             break;
 
-        case 'yellow': console.log("O hexadecimal para a cor " + cor + " é #FFFF00");
+        case 'yellow': hexa = '#FFFF00';
             break;
             
-        case 'green': console.log("O hexadecimal para a cor " + cor + " é #008000");
+        case 'green': hexa = '#008000';
             break;
 
-        case 'purple': console.log("O hexadecimal para a cor " + cor + " é #800080");
+        case 'purple': hexa = '800080';
             break;
     
-        default: console.log("Não temos o equivalente hexadecimal para " + cor);
+        default: console.log("Não temos o equivalente hexadecimal para " + color);
             break;
     };
+
+    return "O hexadecimal para a cor " + color + " é " + hexa + ".";
 };
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-convertToHex('red');    // O hexadecimal para a cor red é #FF0000
-convertToHex('blue');   // O hexadecimal para a cor blue é #0000FF
-convertToHex('yellow'); // O hexadecimal para a cor yellow é #FFFF00
-convertToHex('green');  // O hexadecimal para a cor green é #008000
-convertToHex('purple'); // O hexadecimal para a cor purple é #800080
-convertToHex('white');  // Não temos o equivalente hexadecimal para white
-convertToHex('black');  // Não temos o equivalente hexadecimal para black
-convertToHex('gray');   // Não temos o equivalente hexadecimal para gray
+console.log(convertToHex('red'));    // O hexadecimal para a cor red é #FF0000
+console.log(convertToHex('blue'));   // O hexadecimal para a cor blue é #0000FF
+console.log(convertToHex('yellow')); // O hexadecimal para a cor yellow é #FFFF00
+console.log(convertToHex('green'));  // O hexadecimal para a cor green é #008000
+console.log(convertToHex('purple')); // O hexadecimal para a cor purple é #800080
+console.log(convertToHex('white'));  // Não temos o equivalente hexadecimal para white
+console.log(convertToHex('black'));  // Não temos o equivalente hexadecimal para black
+console.log(convertToHex('gray'));   // Não temos o equivalente hexadecimal para gray
